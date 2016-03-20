@@ -128,10 +128,10 @@ namespace SimpleIRCLibMono
                     if (ircData.Contains("PRIVMSG"))
                     {
 
-                        Regex regex1 = new Regex(@"(?=.*(?<message>((?m)(?<=\b\s" + newChannel + " :).*$)))(?<user>(?<=:)(.*\n?)(?=!~))");
+                        Regex regex1 = new Regex(@"(?=.*(?<message>((?<=\b(?m)\s" + newChannel + " :).*$)))(?<user>(?<=:)(.*\n?)(?=!~))");
                         Match matches1 = regex1.Match(ircData);
 
-                        Regex regex2 = new Regex(@"(?=.*(?<message>((?m)(?<=\b\s" + newUsername + " :).*$)))(?<user>(?<=:)(.*\n?)(?=!~))");
+                        Regex regex2 = new Regex(@"(?=.*(?<message>((?<=\b(?m)\s" + newUsername + " :).*$)))(?<user>(?<=:)(.*\n?)(?=!~))");
                         Match matches2 = regex2.Match(ircData);
 
                         if (matches1.Success)
