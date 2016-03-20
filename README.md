@@ -13,7 +13,7 @@ It's main features are:
   - DCC Download support
 
 ### NuGet
-[NuGet Package](https://www.nuget.org/packages/SimpleIRCLib)
+[NuGet Package](https://www.nuget.org/packages/SimpleIRCLibMono)
 
 ### Version
 1.0.1:
