@@ -55,6 +55,7 @@ namespace SimpleIRCLibMono
             chatOutput = chatoutput;
             DebugCallBack = null;
             downloadStatusChange = null;
+            shouldClientStop = false;
             downloadDir = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile), "Downloads");
         }
 
@@ -110,6 +111,7 @@ namespace SimpleIRCLibMono
             if (con.isConnectionEstablised)
             {
                 shouldClientStop = true;
+                con.quitConnect();
             }
         }
 

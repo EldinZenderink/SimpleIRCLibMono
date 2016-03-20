@@ -70,7 +70,12 @@ namespace IrcLibTest
                 {
                     irc.sendMessage(Input);
                 }
+                if (!irc.isClientRunning()) {
 
+                    Console.WriteLine("CLIENT NOT RUNNING :S");
+                    break;
+                }
+                
             }
         }
 

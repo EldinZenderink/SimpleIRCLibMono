@@ -34,7 +34,8 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="SimpleIRCLibMono">
+    <Reference Include="SimpleIRCLibMono, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\SimpleIRCLibMono\bin\Debug\SimpleIRCLibMono.dll</HintPath>
     </Reference>
     <Reference Include="System" />
