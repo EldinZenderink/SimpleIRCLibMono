@@ -16,35 +16,23 @@ It's main features are:
 [NuGet Package](https://www.nuget.org/packages/SimpleIRCLib)
 
 ### Version
-1.0.0:
-- First release version
-
 1.0.1:
-- Fixed bug where leaving out debug callback would cause nullreferenceexception. 
+- Initial version
 
+1.0.2:
+- update to quit procedure
+- shows quit messages in debug
+- fixed pinger not quiting
 
-1.1.1:
-- Added split in username | message
-- Added quit/disconnect method
-- removed usesless getters and setters
-- fixed a few more less significant bugs
+1.0.2:
+- update to quit procedure
+- shows quit messages in debug
+- fixed pinger not quiting
 
-1.1.2:
-- Removed getDownloadProgress, now download information can be retreived within the  downloadStatusChangedCallback.
-- Fixed error when you try to check if client is running before connecting to a server!
-
-1.1.3:
-- Code mostly reworked by following feedback from this post: [reddit](https://www.reddit.com/r/csharp/comments/452i80/simple_irc_library_with_dcc_download_option_d/), such as:
-- removed static fields
-- removed inheriting classes
-- text now being parsed through regex
-- for receiving messages: a async task instead of a thread
-- getDownloadProgress/downloadStatusChangedCallback has different way of operation (see below)
-- addes status attribute for downloadstatus/progress
-
+1.0.3:
+- bug fix: channels with uppercases caused chat messages not to be parsed
 ### Usage - Console Application
 
-*TIP: If you do not want a seperate DLL file with your program you can either copy the .cs files to your solution/project and manually change the Namespace, or you can use a program called [ILMerge](https://www.microsoft.com/en-us/download/details.aspx?id=17630) to combine a exe and dll together(not tested)!*
 
 This is a list with the most important methods available to you:
 
@@ -141,10 +129,11 @@ Array that will be returned when downloading:
 
 
 ### Full Example 
-An (quick and dirty) example can be found here: 
-[Example](https://github.com/EldinZenderink/SimpleIRCLib/blob/master/IrcLibTest/Program.cs)
+An (quick and dirty) example can be found here **this works on my RPI, including (X)DCC :D **: 
+[Example](https://github.com/EldinZenderink/SimpleIRCLibMono/blob/master/SimpleIRCLibMonoConsole/Program.cs)
 
-A winform example including video tutorial (v1.1.2): 
+
+A winform example including video tutorial (v1.1.2) (windows): 
 [YouTube](https://www.youtube.com/watch?v=Y5JPdwFwoSI)
 
 ### Development
@@ -152,7 +141,6 @@ I will try to fix (significant) bugs as quick as possible, but due to my study t
 
 ### Todos
 
-- MONO :D
 - Some DCC fixes, most things seem to work, but there are some odd cases where it might not work.
 - More readable code (getting better)
 - Renaming some stupidly named names 
